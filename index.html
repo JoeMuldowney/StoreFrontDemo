@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Side Café</title>  
+  <meta name="description" content="Sunny Side Café serves freshly made breakfast and brunch daily. Enjoy fluffy pancakes, veggie omelettes, and artisan coffee in a cozy atmosphere.">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<style>
+    /* Custom Styles */
+body { font-family: Arial, sans-serif; }
+
+.hero {
+  position: relative;
+  height: 60vh; /* scales with viewport */
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills hero nicely */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+.menu-card:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.menu-card img { height: 200px; object-fit: cover; }
+footer { background: #333; color: white; text-align: center; padding: 20px 0; }
+.big-title { font-size: 2.5rem; font-weight: bold;  }
+  </style>
+</head>
+<body>
+<header>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <!-- Brand on the left -->
+    <a class="navbar-brand" href="#">Sunny Side Café</a>
+
+<button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav"
+        aria-label="Toggle navigation menu">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Centered Social Icons -->
+      <div class="d-flex mx-auto gap-3">
+        <a href="https://www.facebook.com/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/facebook.svg" alt="Facebook" width="24" height="24"></span></a>
+        <a href="https://www.instagram.com/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/instagram-1-svgrepo-com.svg" alt="Instagram" width="24" height="24"></span></a>
+        <a href="https://www.yelp.com/biz/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/yelp-logo_svgstack_com_202604061569.svg" alt="Yelp" width="24" height="24"></span></a>
+      </div>
+
+      <!-- Menu links on the right -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hours">Hours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<!-- Hero Section -->
+<div class="hero">
+  <img
+    src="images/store-1200.webp"
+    srcset="
+      images/store-400.webp 400w,
+      images/store-800.webp 800w,
+      images/store-1200.webp 1200w,
+      images/store-1600.webp 1600w
+    "
+    sizes="100vw"
+    class="hero-img"
+    fetchpriority="high"
+    alt="Restaurant interior"
+  >
+  <div class="hero-text">
+    <h1>Breakfast & Brunch, Made Fresh Daily</h1>
+  </div>
+</div>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <div class="big-title mb-4">About Us</div>
+      <p>Sunny Side Café has been serving the community with fresh, locally sourced meals for over 15 years. Our cozy atmosphere and friendly staff make every visit memorable.</p>
+    </div>
+  </section>
+
+    <!-- Hours Section -->
+  <section id="hours" class="py-5">
+    <div class="container text-center">
+      <div class="big-title mb-4">Hours</div>
+      <p>Open daily from 7:00 AM to 2:00 PM.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5 bg-light">
+    <div class="container text-center">
+      <div class="big-title mb-4">Our Menu</div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card menu-card">
+            <img 
+  src="images/pancake-400.webp"
+  srcset="
+    images/pancake-400.webp 400w,
+    images/pancake-800.webp 800w
+  "
+  sizes="(max-width: 600px) 100vw, 386px"
+  class="card-img-top"
+  alt="Stack of fluffy pancakes with syrup and berries"
+>
+            <div class="card-body">
+              <div class="card-title">Fluffy Pancakes</div>
+              <p class="card-text">Served with maple syrup and fresh berries.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card menu-card">
+                       <img 
+  src="images/egg-400.webp"
+  srcset="
+    images/egg-400.webp 400w,
+    images/egg-800.webp 800w
+  "
+  sizes="(max-width: 600px) 100vw, 386px"
+  class="card-img-top"
+  alt="Eggs on a plate"
+>
+            <div class="card-body">
+              <div class="card-title">Veggie Omelette</div>
+              <p class="card-text">Loaded with fresh vegetables and cheddar cheese.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card menu-card">
+                                   <img 
+  src="images/coffee-400.webp"
+  srcset="
+    images/coffee-400.webp 400w,
+    images/coffee-800.webp 800w
+  "
+  sizes="(max-width: 600px) 100vw, 386px"
+  class="card-img-top"
+  alt="Coffee with some latte art on top"
+>
+            <div class="card-body">
+              <div class="card-title">Artisan Coffee</div>
+              <p class="card-text">Locally roasted coffee to kickstart your day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <div class="big-title mb-4">Contact Us</div>
+      <p>Call or message us to reserve a table or place an order.</p>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-danger" aria-label="send message">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Sunny Side Café. All Rights Reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js?v=2"></script>
+</body>
+</html>

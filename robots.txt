@@ -1,0 +1,6 @@
+# robots.txt for Sunny Side Café demo site
+
+User-agent: *
+Allow: /
+
+Sitemap: https://d2b05cn9zva21a.cloudfront.net/sitemap.xml
