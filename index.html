@@ -40,13 +40,27 @@ body { font-family: Arial, sans-serif; }
 }
 .menu-card img { height: 200px; object-fit: cover; }
 footer { background: #333; color: white; text-align: center; padding: 20px 0; }
-.big-title { font-size: 2.5rem; font-weight: bold;  }
+.big-title { font-size: 2.5rem; font-weight: bold; color: #F97316  }
+
+.enlarge {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+.enlarge:hover {
+  transform: scale(1.1);
+}
+.navbar-color {
+  background-color: #FFF7ED;
+}
+
   </style>
 </head>
 <body>
 <header>
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+<nav class="navbar navbar-expand-lg navbar-color fixed-top ">
   <div class="container">
     <!-- Brand on the left -->
     <a class="navbar-brand" href="#">Sunny Side Café</a>
@@ -62,17 +76,17 @@ footer { background: #333; color: white; text-align: center; padding: 20px 0; }
     <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Centered Social Icons -->
       <div class="d-flex mx-auto gap-3">
-        <a href="https://www.facebook.com/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/facebook.svg" alt="Facebook" width="24" height="24"></span></a>
-        <a href="https://www.instagram.com/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/instagram-1-svgrepo-com.svg" alt="Instagram" width="24" height="24"></span></a>
-        <a href="https://www.yelp.com/biz/YourCafePage" target="_blank" rel="noopener noreferrer" class="text-white"><span><img src="images/yelp-logo_svgstack_com_202604061569.svg" alt="Yelp" width="24" height="24"></span></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-white enlarge"><span><img src="images/facebook.svg" alt="Facebook" width="24" height="24"></span></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-white enlarge"><span><img src="images/instagram-1-svgrepo-com.svg" alt="Instagram" width="24" height="24"></span></a>
+        <a href="https://www.yelp.com/" target="_blank" rel="noopener noreferrer" class="text-white enlarge"><span><img src="images/yelp-logo_svgstack_com_202604061569.svg" alt="Yelp" width="24" height="24"></span></a>
       </div>
 
       <!-- Menu links on the right -->
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#hours">Hours</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link enlarge" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link enlarge" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link enlarge" href="#hours">Hours</a></li>
+        <li class="nav-item"><a class="nav-link enlarge" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -208,5 +222,17 @@ footer { background: #333; color: white; text-align: center; padding: 20px 0; }
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js?v=2"></script>
+  <script>
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbar = document.querySelector('#navbarNav');
+    const collapse = bootstrap.Collapse.getInstance(navbar);
+
+    if (collapse) {
+      collapse.hide();
+    }
+  });
+});
+</script>
 </body>
 </html>
