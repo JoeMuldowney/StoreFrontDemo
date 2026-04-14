@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://d2b05cn9zva21a.cloudfront.net/sitemap.xml
+Sitemap: https://joemuldowneydemos-sunnysidecafe.com/sitemap.xml

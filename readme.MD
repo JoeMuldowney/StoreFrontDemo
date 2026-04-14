@@ -2,7 +2,7 @@
 
 Sunny Side Café is a modern, responsive demo website showcasing a fictional café serving breakfast and brunch. This project demonstrates best practices in performance, responsive design, accessibility, and SEO, suitable for freelance portfolios.
 
-View the live demo: https://d2b05cn9zva21a.cloudfront.net
+View the live demo: https://joemuldowneydemos-sunnysidecafe.com
 
 ## Table of Contents
 
@@ -44,6 +44,6 @@ View the live demo: https://d2b05cn9zva21a.cloudfront.net
    - HTML, CSS
 2. **Framework**
    - Bootstrap5
-3. **AWS Services**
-   - S3
-   - Cloundfront
+3. **Hosting**
+    - Cloudflare Pages
+
